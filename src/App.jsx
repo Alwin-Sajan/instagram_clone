@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 // import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import HomePage from './components/HomePage';
+import HomePage from './Pages/HomePage';
 import back from './assets/back.png'
 
 const App = () => {
   const[login,setLogin] =  useState(true);
-  const[preImage,setpreImage] =useState(true);
+  const[preImage,setpreImage] =useState(false);
   return (
     <div className='w-full h-screen relative bg-white'>
 
