@@ -1,14 +1,15 @@
 import React from 'react'
 import MenuBar from '../components/MenuBar'
+import { menu2, profile } from '../assets/index.js';
 
 const HomePage = () => {
 
   const postsData = {
-    1: { id: 1, image: "https://via.placeholder.com/150" },
-    2: { id: 2, image: "https://via.placeholder.com/150" },
+    1: { id: "solom_rider", image: "https://via.placeholder.com/150", time: "5d" },
+    2: { id: "Amazing_Dreamer", image: "https://via.placeholder.com/150", time: "1w" },
   };
 
-  const storyData = {
+  const otherUserData = {
     1: { id: "solom_rider", image: "https://via.placeholder.com/150" },
     2: { id: "solom_rider", image: "https://via.placeholder.com/150" },
     3: { id: "solom_rider", image: "https://via.placeholder.com/150" },
@@ -29,14 +30,19 @@ const HomePage = () => {
     18: { id: "solom_rider", image: "https://via.placeholder.com/150" },
   }
 
+  const profileData = {
+    nickname: "present",
+    username: "Alvie_25"
+  }
+
   return (
     <div className='w-full relative h-full flex '>
       {/* right side */}
-      <div className='w-[18%] fixed left-0 h-screen  py-4 px-6 border-r-4 border-opacity-40 border-slate-500'>
-        <div className='flex items-center gap-1'>
+      <div className='w-[18%] fixed left-0 h-screen  py-4 px-6 border-r-2 border-opacity-40 border-slate-500'>
+        <a href='/' className='flex items-center gap-1'>
           <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/62-instagram-512.png" className='h-6 ' alt="" />
           <img src="https://logos-world.net/wp-content/uploads/2020/04/Instagram-Logo-2015-2016.png" className='w-24 mt-2' alt="" />
-        </div>
+        </a>
 
         <MenuBar />
       </div>
@@ -47,7 +53,7 @@ const HomePage = () => {
         {/* STORIES */}
         <div className='h-28 w-full  p-4 px-12'>
           <ul className=' w-[100%] overflow-x-scroll scr flex gap-6'>
-            {Object.values(storyData).map((std) =>
+            {Object.values(otherUserData).map((std) =>
               <li className='grid w-16 items-center'>
                 <img src={std.image} className='bg-white rounded-full h-16' alt="" />
                 <p className='text-sm text-center'>{std.id.slice(0, 10)}..</p>
@@ -67,9 +73,16 @@ const HomePage = () => {
 
           <ul>
             {Object.values(postsData).map((pop) => (
-              <li key={pop.id} className='w-fill h-[45vw] mb-8 bg-orange-400'>
-                <div className='w-full h-16 flex items-center p-4'>
-                  <img src={pop.image} className='rounded-full h-8' alt="" />
+              <li key={pop.id} className='w-fill h-[45vw] mb-8 border-b-2'>
+
+                <div className='w-full h-16 flex items-center justify-between p-4'>
+                  <span className='flex items-center'>
+                    <img src={pop.image} className='rounded-full h-8' alt="" />
+                    <p className='text-sm font-semibold ml-2'>{pop.id} </p>
+                    <p className='text-sm' >_ • {pop.time}</p>
+                  </span>
+                  <img src={menu2} className='h-6' alt="" />
+
                 </div>
                 <img src={pop.image} alt={`Post ${pop.id}`} className='bg-slate-400 h-[80%]' />
               </li>
@@ -80,8 +93,35 @@ const HomePage = () => {
       </div>
 
       {/* //left side*/}
-      <div className='w-[30%] fixed right-0 h-screen bg-blue-400 py-6 px-12'>
-        right
+      <div className='w-[30%] right-0 h-screen py-6 px-12'>
+
+        <div className='flex items-center'>
+          <img src={profile} className='h-12 rounded-full' alt="profile pic" />
+          <span className='ml-2 w-full'>
+            <h1 className='text-sm font-semibold'>{profileData.username}</h1>
+            <h2 className='text-xs w-32'>{profileData.nickname}</h2>
+          </span>
+          <a href="" className='text-sm text-blue-400 '>Switch</a>
+        </div>
+
+
+        <p className='text-sm inline-block text-gray-700 mt-6'>Suggested for you</p>
+        <a href="" className=' text-sm inline-block ml-28 mb-6'>See all</a>
+
+        <ul className='grid gap-4'>
+          {Object.values(otherUserData).slice(14, 18).map((user) =>
+            <li key={user.id} className='flex items-center w-full'>
+              <img src={user.image} className='h-12 rounded-full' alt="profile pic" />
+              <span className='ml-2 w-48'>
+                <h1 className='text-sm m-0 p-0 font-semibold'>{user.id}</h1>
+                <h2 className='text-xs -mt-1 w-48'>Suggested for you</h2>
+              </span>
+              <a href="" className='text-sm text-blue-400 '>Follow</a>
+            </li>
+          )}
+        </ul>
+
+
       </div>
     </div>
   )

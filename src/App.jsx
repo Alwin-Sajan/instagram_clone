@@ -15,8 +15,10 @@ const App = () => {
       
       {login ? (<HomePage/>) :(
       
-      <div className='bg-gray-300 h-3/4 w-3/4 m-auto'>
-        hyyy
+      <div className=' flex items-center h-full w-full justify-center '>
+        <div className='bg-gray-300 block h-3/4 w-1/3'>
+          ghh
+        </div>
       </div>)
       
       }
