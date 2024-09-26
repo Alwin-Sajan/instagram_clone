@@ -8,3 +8,6 @@ export { default as explore_ic } from './explore_ic.png';
 export { default as heart } from './heart.png';
 export { default as create_ic } from './create.png';  // Ensure this line exists
 export { default as menu2 } from './menu2.png';
+export { default as comd } from './comd.png';
+export { default as rheart } from './rheart.png';
+

@@ -1,22 +1,24 @@
 import React from 'react'
 import MenuBar from '../components/MenuBar'
-import { menu2, profile } from '../assets/index.js';
+import { comd, heart, menu2, msg_ic, profile, rheart } from '../assets/index.js';
 
 const HomePage = () => {
 
   const postsData = {
-    1: { id: "solom_rider", image: "https://via.placeholder.com/150", time: "5d" },
-    2: { id: "Amazing_Dreamer", image: "https://via.placeholder.com/150", time: "1w" },
+    1: { id: "solom_rider", image: "https://i.pinimg.com/236x/49/cd/4d/49cd4dd30a5e3f0c76240855b3fdb3bf.jpg", time: "5d" },
+    2: { id: "Amazing_Dreamer", image: "https://www.shutterfly.com/ideas/wp-content/uploads/2017/12/creative-instagram-photo-ideas_nature-2.jpg", time: "1w" },
+    3: { id: "solom_rider", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-C_YSWcI7ISBSkNFm72feHjP3ohN-eYILMz8z1xo88c2XU6fY_DI9CQqw16Vub63rDJk&usqp=CAU", time: "5d" },
+
   };
 
   const otherUserData = {
     1: { id: "solom_rider", image: "https://via.placeholder.com/150" },
-    2: { id: "solom_rider", image: "https://via.placeholder.com/150" },
-    3: { id: "solom_rider", image: "https://via.placeholder.com/150" },
-    4: { id: "solom_rider", image: "https://via.placeholder.com/150" },
-    5: { id: "solom_rider", image: "https://via.placeholder.com/150" },
-    6: { id: "solom_rider", image: "https://via.placeholder.com/150" },
-    7: { id: "solom_rider", image: "https://via.placeholder.com/150" },
+    2: { id: "The_Abhi", image: "https://via.placeholder.com/150" },
+    3: { id: "Hail_Queen", image: "https://via.placeholder.com/150" },
+    4: { id: "MaxVesss", image: "https://via.placeholder.com/150" },
+    5: { id: "Anarkalie_09", image: "https://via.placeholder.com/150" },
+    6: { id: "Blue_sky54", image: "https://via.placeholder.com/150" },
+    7: { id: "Present_legend0", image: "https://via.placeholder.com/150" },
     8: { id: "solom_rider", image: "https://via.placeholder.com/150" },
     9: { id: "solom_rider", image: "https://via.placeholder.com/150" },
     10: { id: "solom_rider", image: "https://via.placeholder.com/150" },
@@ -84,7 +86,12 @@ const HomePage = () => {
                   <img src={menu2} className='h-6' alt="" />
 
                 </div>
-                <img src={pop.image} alt={`Post ${pop.id}`} className='bg-slate-400 h-[80%]' />
+                <img src={pop.image} alt={`Post ${pop.id}`} className='bg-slate-400 w-full h-[80%]' />
+                <div className='flex py-2 gap-2'>
+                  <img src={pop.Liked?rheart:heart} className='p-1 h-8 w-8' alt="" />
+                  <img src={comd} className='h-8 w-8 p-1' alt="" />
+                  <img src={msg_ic} className='h-8 w-8 p-1' alt="" />
+                </div>
               </li>
             ))}
           </ul>
