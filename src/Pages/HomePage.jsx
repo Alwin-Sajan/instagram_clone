@@ -12,13 +12,13 @@ const HomePage = () => {
   };
 
   const otherUserData = {
-    1: { id: "solom_rider", image: "https://via.placeholder.com/150" },
-    2: { id: "The_Abhi", image: "https://via.placeholder.com/150" },
-    3: { id: "Hail_Queen", image: "https://via.placeholder.com/150" },
-    4: { id: "MaxVesss", image: "https://via.placeholder.com/150" },
-    5: { id: "Anarkalie_09", image: "https://via.placeholder.com/150" },
-    6: { id: "Blue_sky54", image: "https://via.placeholder.com/150" },
-    7: { id: "Present_legend0", image: "https://via.placeholder.com/150" },
+    1: { id: "solom_rider", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbUOggTIUocZJcFyki1aDdl2aUDbRzR6hnnA&s" },
+    2: { id: "The_Abhi", image: "https://www.shutterfly.com/ideas/wp-content/uploads/2017/12/creative-instagram-photo-ideas_nature-2.jpg" },
+    3: { id: "Hail_Queen", image: "https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg" },
+    4: { id: "MaxVesss", image: "https://i0.wp.com/www.commercialphotographynorthwestblog.co.uk/wp-content/uploads/2020/10/MDH_8729webqualitysquare.jpg?resize=560%2C560&ssl=1" },
+    5: { id: "Anarkalie_09", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7NKQmSLEJmAUJzpfCdJ89Xl3zcNMwQt7krw&s" },
+    6: { id: "Blue_sky54", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPMz8sVYhhfkXbCxEkES1u9Cm_YWW7fEg_Lw&s" },
+    7: { id: "Present_legend0", image: "https://pbs.twimg.com/profile_images/1850932002142494720/CWXir-a__400x400.jpg" },
     8: { id: "solom_rider", image: "https://via.placeholder.com/150" },
     9: { id: "solom_rider", image: "https://via.placeholder.com/150" },
     10: { id: "solom_rider", image: "https://via.placeholder.com/150" },
@@ -26,21 +26,22 @@ const HomePage = () => {
     12: { id: "solom_rider", image: "https://via.placeholder.com/150" },
     13: { id: "solom_rider", image: "https://via.placeholder.com/150" },
     14: { id: "solom_rider", image: "https://via.placeholder.com/150" },
-    15: { id: "solom_rider", image: "https://via.placeholder.com/150" },
-    16: { id: "solom_rider", image: "https://via.placeholder.com/150" },
-    17: { id: "solom_rider", image: "https://via.placeholder.com/150" },
-    18: { id: "solom_rider", image: "https://via.placeholder.com/150" },
+    15: { id: "telly_gen", image: "https://img.freepik.com/free-vector/simple-shadow-profile-picture-template_742173-8847.jpg" },
+    16: { id: "g_force", image: "https://pbs.twimg.com/profile_images/1769741269327294464/bwPqFyxG_400x400.jpg" },
+    17: { id: "the_gang", image: "https://pbs.twimg.com/profile_images/1802661921847402496/s6-d_s2o_400x400.jpg" },
+    18: { id: "the_cook", image: "https://img.freepik.com/free-photo/beautiful-woman-dreaming-cyber-monday-sales_23-2148313194.jpg?w=360" },
   }
 
   const profileData = {
     nickname: "present",
-    username: "Alvie_25"
+    username: "Alvie_25",
+    image:"https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/newscms/2024_33/3659067/square_profile.jpg"
   }
 
   return (
     <div className='w-full relative h-full flex '>
       {/* right side */}
-      <div className='w-[18%] fixed left-0 h-screen  py-4 px-6 border-r-2 border-opacity-40 border-slate-500'>
+      <div className='w-[18%] fixed left-0 h-screen  py-4 px-6 border-r-2 border-opacity-40 border-slate-300'>
         <a href='/' className='flex items-center gap-1'>
           <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/62-instagram-512.png" className='h-6 ' alt="" />
           <img src="https://logos-world.net/wp-content/uploads/2020/04/Instagram-Logo-2015-2016.png" className='w-24 mt-2' alt="" />
@@ -103,7 +104,7 @@ const HomePage = () => {
       <div className='w-[30%] right-0 h-screen py-6 px-12'>
 
         <div className='flex items-center'>
-          <img src={profile} className='h-12 rounded-full' alt="profile pic" />
+          <img src={profileData.image} className='h-12 rounded-full' alt="profile pic" />
           <span className='ml-2 w-full'>
             <h1 className='text-sm font-semibold'>{profileData.username}</h1>
             <h2 className='text-xs w-32'>{profileData.nickname}</h2>
