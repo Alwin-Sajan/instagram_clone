@@ -41,7 +41,7 @@ const HomePage = () => {
   return (
     <div className='w-full relative h-full flex '>
       {/* right side */}
-      <div className='w-[18%] fixed left-0 h-screen  py-4 px-6 border-r-2 border-opacity-40 border-slate-300'>
+      <div className='w-[18%]  bg-indigo-500  fixed left-0 h-screen  py-4 px-6 border-r-2 border-opacity-40 border-slate-300'>
         <a href='/' className='flex items-center gap-1'>
           <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/62-instagram-512.png" className='h-6 ' alt="" />
           <img src="https://logos-world.net/wp-content/uploads/2020/04/Instagram-Logo-2015-2016.png" className='w-24 mt-2' alt="" />
@@ -51,7 +51,7 @@ const HomePage = () => {
       </div>
 
       {/* Center side*/}
-      <div className='w-[52%] ml-[18%] h-[300%] '>
+      <div className='w-[52%] ml-[18%] h-[300%] bg-indigo-400 '>
 
         {/* STORIES */}
         <div className='h-28 w-full  p-4 px-12'>
@@ -101,7 +101,7 @@ const HomePage = () => {
       </div>
 
       {/* //left side*/}
-      <div className='w-[30%] right-0 h-screen py-6 px-12'>
+      <div className='w-[30%] right-0 h-screen py-6 px-12 bg-indigo-500'>
 
         <div className='flex items-center'>
           <img src={profileData.image} className='h-12 rounded-full' alt="profile pic" />
